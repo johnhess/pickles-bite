@@ -31,13 +31,8 @@
 	my_object = {'foo': 'bar', 'baz': qux}
 
 	my_pickle = pickle.dumps(my_object)
-	# Write to file or stash in a database
 
-Then, later on another machine or in another session:
-
-	!python
-	# Grab the string from a file or DB
-	my_object = pickle.loads(my_pickle)
+	print my_pickle
 
 ---
 
@@ -58,6 +53,13 @@ Then, later on another machine or in another session:
 	I0
 	tp6
 	as.
+
+---
+
+Then, later on another machine or in another session:
+
+	!python
+	my_object = pickle.loads(my_pickle)
 
 ---
 
